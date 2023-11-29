@@ -1,5 +1,17 @@
-function App() {
-  return <h1>This is my Travel List Project</h1>;
-}
+import "./index.css";
+import Logo from "./Logo";
+import Form from "./Form";
+import PackingList from "./PackingList";
+import Stats from "./Stats";
 
+function App() {
+  return (
+    <>
+      <Logo />
+      <Form />
+      <PackingList />
+      <Stats />
+    </>
+  );
+}
 export default App;
