@@ -21,12 +21,8 @@ function App() {
   };
 
   const removeItem = function (id) {
-    const removeItemIndex = itemList.findIndex((item) => item.id === id);
-    console.log(removeItemIndex);
-    setItemList((items) => {
-      items.splice(removeItemIndex, 1);
-      return [...items];
-    });
+    console.log(id);
+    setItemList((items) => items.filter((item) => item.id !== id));
   };
 
   const updateItem = function (id) {
