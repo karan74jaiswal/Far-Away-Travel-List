@@ -26,12 +26,11 @@ function App() {
   };
 
   const updateItem = function (id) {
-    const itemIndex = itemList.findIndex((item) => item.id === id);
-    const updatedItems = itemList.map((item, index) => {
-      if (index === itemIndex) item.packed = !item.packed;
-      return item;
-    });
-    setItemList(updatedItems);
+    setItemList((items) =>
+      items.map((item) =>
+        item.id === id ? { ...item, packed: !item.packed } : item
+      )
+    );
   };
 
   const clearList = function () {

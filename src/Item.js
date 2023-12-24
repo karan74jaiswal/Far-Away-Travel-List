@@ -6,7 +6,8 @@ const Item = function ({ item, removeItem, updateItem }) {
       <input
         type="checkbox"
         name={item.description}
-        onClick={(e) => {
+        value={item.packed}
+        onChange={() => {
           updateItem(item.id);
         }}
       />
