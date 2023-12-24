@@ -7,18 +7,13 @@ const Item = function ({ item, removeItem, updateItem }) {
         type="checkbox"
         name={item.description}
         onClick={(e) => {
-          // console.log(e.target.checked);
           updateItem(item.id);
         }}
       />
       <span
-        style={
-          item.packed
-            ? {
-                textTransform: "line-through",
-              }
-            : {}
-        }
+        style={{
+          textDecoration: item.packed ? "line-through" : "none",
+        }}
       >
         {item.quantity} {item.description}
       </span>

@@ -7,6 +7,7 @@ const Form = function ({ addItem }) {
   const handleSubmit = function (e) {
     e.preventDefault();
     // console.log(description);
+    if (!description) alert("Item Description cannot be empty");
     if (description) {
       addItem({
         quantity,

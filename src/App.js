@@ -6,16 +6,13 @@ import PackingList from "./PackingList";
 import Stats from "./Stats";
 
 function App() {
-  const [itemList, setItemList] = useState([
-    { id: 1, description: "Passports", quantity: 2, packed: false },
-    { id: 2, description: "Socks", quantity: 12, packed: false },
-  ]);
+  const [itemList, setItemList] = useState([]);
 
   const addItem = function (item) {
     setItemList((i) => [
       ...i,
       {
-        id: i.length + 1,
+        id: Date.now(),
         quantity: item.quantity,
         description: item.description,
         packed: false,
